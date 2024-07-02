@@ -1,0 +1,33 @@
+.wrapper {
+	min-height: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+.content{
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 50px 0;
+}
+
+.tabs{
+	margin-left: 50px;
+}
+.tabs__items {
+	display: flex;
+}
+.tabs__item {
+	flex: 0 1 33.3333%;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.tabs__block{
+	padding: 20px;
+	font-size: 17px;
+	display: none;
+}
+.tabs__block:target{
+	display: block;
+}
