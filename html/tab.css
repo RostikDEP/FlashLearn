@@ -1,3 +1,17 @@
+*,
+*:before,
+*:after {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+html,
+body {
+	height: 100%;
+	font-size: 16px;
+}
+
 .wrapper {
 	min-height: 100%;
 	position: relative;
@@ -10,18 +24,28 @@
 	padding: 50px 0;
 }
 
-.tabs{
-	margin-left: 50px;
-}
+
 .tabs__items {
 	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #143642;
+	border-radius: 10px;
+
 }
 .tabs__item {
-	flex: 0 1 33.3333%;
+	flex: 0 1 23%;
 	height: 50px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	text-decoration: none;
+	color: white;
+	font-size: 18px;
+	text-transform: full-size-kana;
+}
+.tabs__item:hover{
+	background-color: #EAA13B;
 }
 .tabs__block{
 	padding: 20px;
