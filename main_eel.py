@@ -1,4 +1,10 @@
-import eel
+import eel, time
 
 eel.init("html")
-eel.start("index.html", size=(200, 200))
+
+# @eel.expose
+# def lol():
+# 	print(a)
+eel.lol()
+eel.start("tabs.html", size=(1200, 600))
+# time.sleep(2)

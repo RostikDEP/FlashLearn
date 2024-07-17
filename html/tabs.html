@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Tabs</title>
 	<link rel="stylesheet" type="text/css" href="tab.css">
+	<script src="/eel.js"></script>
 </head>
 <body>
 
@@ -17,7 +18,12 @@
 			</nav>
 			<div class="tabs__body">
 				<div class="tabs__block" id="tab_01">
-					Test Text AAA LOREM
+					<script>
+						eel.expose(lol)
+						function lol() {
+							document.GetElementById("tab_01");
+						}
+					</script>
 				</div>
 				<div class="tabs__block" id="tab_02">
 					Test Text AAA LOREM I L
@@ -26,6 +32,6 @@
 		</div>
 	</div>
 </div>
-
+<script src="tabs.js"></script>
 </body>
 </html>
