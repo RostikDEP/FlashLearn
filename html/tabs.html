@@ -26,12 +26,26 @@
 					</script>
 				</div>
 				<div class="tabs__block" id="tab_02">
-					Test Text AAA LOREM I L
+					<div class="add_form__container">
+						<form class="add_form_block">
+							<input placeholder="Слово" type="text" class="add_word_input">
+							<input placeholder="Переклад" type="text" class="add_word_input">
+							<input placeholder="Речення" type="text" class="add_word_input">
+							<button id="add_button" type="button" class="add_word_input">Add Word</button>
+						</form>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
 <script src="tabs.js"></script>
+<script type="text/javascript">
+	var a = document.getElementById("add_button");
+	a.onclick = ale;
+	function ale(event){
+		alert("Button is working");
+	}
+</script>
 </body>
 </html>

@@ -48,10 +48,36 @@ body {
 	background-color: #EAA13B;
 }
 .tabs__block{
-	padding: 20px;
+/*	padding: 20px;*/
 	font-size: 17px;
 	display: none;
 }
 .tabs__block:target{
 	display: block;
+}
+.add_form__container{
+	display: flex;
+	justify-content: center;
+}
+.add_form_block{
+	display: flex;
+	border: 2px solid black;
+	width:70%;
+	height: 500px;
+	box-shadow: 4px 4px 4px gray;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.add_word_input{
+	background-color: #bababa;
+	width: 70%;
+	height: 30px;
+	margin-top: 4px;
+	border: 2px outset #595959 ;
+}
+#add_button:active{
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
