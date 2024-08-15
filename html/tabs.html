@@ -18,19 +18,14 @@
 			</nav>
 			<div class="tabs__body">
 				<div class="tabs__block" id="tab_01">
-					<script>
-						eel.expose(lol)
-						function lol() {
-							document.GetElementById("tab_01");
-						}
-					</script>
+
 				</div>
 				<div class="tabs__block" id="tab_02">
 					<div class="add_form__container">
-						<form class="add_form_block">
-							<input placeholder="Слово" type="text" class="add_word_input">
-							<input placeholder="Переклад" type="text" class="add_word_input">
-							<input placeholder="Речення" type="text" class="add_word_input">
+						<form class="add_form_block" id="add_form_block">
+							<input placeholder="Слово" type="text" class="add_word_input" id="inner_word">
+							<input placeholder="Переклад" type="text" class="add_word_input" id="inner_translate">
+							<input placeholder="Речення" type="text" class="add_word_input" id="inner_sentence">
 							<button id="add_button" type="button" class="add_word_input">Add Word</button>
 						</form>
 					</div>
@@ -40,12 +35,5 @@
 	</div>
 </div>
 <script src="tabs.js"></script>
-<script type="text/javascript">
-	var a = document.getElementById("add_button");
-	a.onclick = ale;
-	function ale(event){
-		alert("Button is working");
-	}
-</script>
 </body>
 </html>

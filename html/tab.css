@@ -68,6 +68,13 @@ body {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	transition: background-color 1s ease;
+}
+.add_form_block.green{
+	background-color: green;
+}
+.add_form_block.red{
+	background-color: red;
 }
 .add_word_input{
 	background-color: #bababa;
