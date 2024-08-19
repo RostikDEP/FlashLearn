@@ -18,7 +18,10 @@ def AddWord(word, translate, sentence):
         eel.FormBlink("red")
 
 
-
+@eel.expose
+def GetRandomWordPy():
+    word = dbController.GetRandomWord()
+    eel.setup_cardJS(word[1], word[2], word[3])
 
 
 eel.start("tabs.html")
