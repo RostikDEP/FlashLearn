@@ -1,62 +1,80 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Tabs</title>
-	<link rel="stylesheet" type="text/css" href="tab.css">
-	<link rel="stylesheet" href="main.css" />
-	<script src="/eel.js"></script>
-	<!-- <script src="/main.js"></script> -->
-</head>
-<body>
-
-<div class="wrapper">
-	<div class="content">
-		<div class="tabs">
-			<nav class="tabs__items">
-				<a href="#tab_01" class="tabs__item">Вивчення слів</a>
-				<a href="#tab_02" class="tabs__item">Додати слова</a>
-			</nav>
-			<div class="tabs__body">
-				<div class="tabs__block" id="tab_01">
-
-<div class="card">
-		<div class="card__inner">
-			<div class="card__face card__face--front">
-				<h2 id="word_front">Card Front</h2>
-			</div>
-			<div class="card__face card__face--back">
-				<div class="card__content">
-					<div class="card__header">
-						<img src="pp.jpg" alt="" class="pp" />
-						<h2 id='word_translate'>Tyler Potts</h2>
-					</div>
-					<div class="card__body">
-						<!-- <h3>JavaScript Wizard</h3> -->
-						<p id='word_sentences'>Lorem ipsum <strong>dolor</strong> sit amet, consectetur <strong>adipiscing</strong> elit. Sed id erat a magna lobortis dictum. Nunc est arcu, <strong>lacinia</strong> quis sapien placerat, <strong>laoreet</strong> tincidunt nulla.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-<script src="main.js"></script>
-				</div>
-				<div class="tabs__block" id="tab_02">
-					<div class="add_form__container">
-						<form class="add_form_block" id="add_form_block">
-							<input placeholder="Слово" type="text" class="add_word_input" id="inner_word">
-							<input placeholder="Переклад" type="text" class="add_word_input" id="inner_translate">
-							<input placeholder="Речення" type="text" class="add_word_input" id="inner_sentence">
-							<button id="add_button" type="button" class="add_word_input">Add Word</button>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-<script src="tabs.js"></script>
-<script type="text/javascript" src="words.js"></script>
-</body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tabs</title>
+    <link rel="stylesheet" type="text/css" href="tab.css">
+    <link rel="stylesheet" href="main.css" />
+    <script src="/eel.js"></script>
+    <!-- <script src="/main.js"></script> -->
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="content">
+        <div class="tabs">
+          <nav class="tabs__items">
+            <a href="#tab_01" class="tabs__item">Вивчення слів</a>
+            <a href="#tab_02" class="tabs__item">Додати слова</a>
+            <a href="#tab_03" class="tabs__item">Розпізнати текст</a>
+          </nav>
+          <div class="tabs__body">
+            <div class="tabs__block" id="tab_01">
+              <div class="card">
+                <div class="card__inner">
+                  <div class="card__face card__face--front">
+                    <h2 id="word_front">Card Front</h2>
+                  </div>
+                  <div class="card__face card__face--back">
+                    <div class="card__content">
+                      <div class="card__header">
+                        <img src="pp.jpg" alt="" class="pp" />
+                        <h2 id='word_translate'>Tyler Potts</h2>
+                      </div>
+                      <div class="card__body">
+                        <!-- <h3>JavaScript Wizard</h3> -->
+                        <p id='word_sentences'>Lorem ipsum <strong>dolor</strong> sit amet, consectetur <strong>adipiscing</strong> elit. Sed id erat a magna lobortis dictum. Nunc est arcu, <strong>lacinia</strong> quis sapien placerat, <strong>laoreet</strong> tincidunt nulla. </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <script src="main.js"></script>
+            </div>
+            <div class="tabs__block" id="tab_02">
+              <div class="add_form__container">
+                <form class="add_form_block" id="add_form_block">
+                  <input placeholder="Слово" type="text" class="add_word_input" id="inner_word">
+                  <input placeholder="Переклад" type="text" class="add_word_input" id="inner_translate">
+                  <input placeholder="Речення" type="text" class="add_word_input" id="inner_sentence">
+                  <button id="add_button" type="button" class="add_word_input">Add Word</button>
+                </form>
+              </div>
+            </div>
+            <div class="tabs__block" id="tab_03">
+            	<div class="container">
+            		<div class="settings_form">
+            			<h3>Початкова точка</h3>
+            			<input placeholder="Х" type="text" name="px">
+            			<input placeholder="У" type="text" name="py">
+            			<h3>Кінцева точка</h3>
+            			<input placeholder="Х" type="text" name="kx">
+            			<input placeholder="У" type="text" name="ky"><br>
+            			<button id="config_load_button">Завантажити з конфігу</button>	
+            			<button>Перекласти область</button><br>
+            			<h3>Розпізнаний текст: </h3>
+            			<textarea name="" id=""></textarea>
+            			<h3>Переклад: </h3>
+            			<textarea name="" id=""></textarea>
+            		</div>
+            	</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="tabs.js"></script>
+    <script type="text/javascript" src="words.js"></script>
+    <script type="text/javascript" src="textRecognize.js"></script>
+  </body>
 </html>

@@ -88,3 +88,17 @@ body {
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
+
+#tab_03 .container {
+  width:  100%;
+  height: 70vh;
+  background-color: blue;
+  display: flex ;
+  padding: 0;
+  justify-content: center	;
+}
+.settings_form{
+  width: 50%;
+/*  height: 100%;*/
+  background-color: green;
+}
