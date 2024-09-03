@@ -1,8 +1,9 @@
 import eel, time
-from utils import Database, ConfigProcessor
+from utils import Database, ConfigProcessor, Recognizer
 
 dbController = Database("words.db")
 confProc = ConfigProcessor()
+recognizer = Recognizer()
 
 eel.init("html")
 
@@ -32,8 +33,10 @@ def GetScreenConfig():
     return cords
 
 @eel.expose
-def AreaRecognize():
-    print("Hello")
+def AreaRecognize(x1, y1, x2, y2):
+    text = recognizer.RecognizeText(int(x1), int(y1), int(x2), int(y2))
+    translation = recognizer.TranslateText(text)
+    eel.FillTextData(text, translation)
 
 
 eel.start("tabs.html")
