@@ -31,6 +31,10 @@ def GetScreenConfig():
     cords = confProc.ReadData("configs/screen_coordinates.json")
     return cords
 
+@eel.expose
+def AreaRecognize():
+    print("Hello")
+
 
 eel.start("tabs.html")
 # time.sleep(2)

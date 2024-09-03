@@ -1,4 +1,5 @@
 let loadConfigButton = document.getElementById('config_load_button');
+let recognizeButton = document.getElementById('recognize_button');
 
 function loadConfigButton__click(){
 	let x1 = document.getElementById("x1");
@@ -22,4 +23,9 @@ async function loadConfig() {
     y2.value = cords[3];
 }
 
+async function recognizeButton__click(){
+    await eel.AreaRecognize();
+};
+
+recognize_button.onclick = recognizeButton__click;
 loadConfigButton.onclick = loadConfigButton__click;
