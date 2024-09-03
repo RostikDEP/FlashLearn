@@ -22,4 +22,4 @@ class ConfigProcessor:
         with open(path, "r") as file:
             json_content = file.read()
             data_ = json.loads(json_content)
-            return (data_["x1"], data_["y1"], data_["x2"], data_["y2"],)
+            return (data_["x1"], data_["y1"], data_["x2"], data_["y2"])
