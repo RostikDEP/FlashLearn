@@ -91,17 +91,28 @@ body {
 
 #tab_03 .container {
   width:  100%;
-  height: 70vh;
-  background-color: blue;
+/*  background-color: blue;*/
   display: flex ;
+  flex-direction: column;
   padding: 0;
-  justify-content: center	;
+  align-items: center	;
+}
+#tab_03 .container:after{
+	content: '';
+	padding-bottom: 30px;
+}
+#tab_03 .container:before{
+	content: '';
+	padding-bottom: 30px;
 }
 .settings_form{
 	display: flex;
 	flex-direction: column;
   width: 50%;
-  background-color: green;
+/*  background-color: green;*/
+  box-shadow: 2px 2px 5px black;
+/*  border-top: 1px black solid;
+  border-left: 1px black solid;*/
 }
 .form_item{
 	background-color: red;
@@ -110,7 +121,7 @@ body {
 }
 
 .form_item_b{
-	background-color: yellow;
+/*	background-color: yellow;*/
 	display: flex;
 	flex-direction: column;
 /*	justify-content: space-around;*/
@@ -119,16 +130,15 @@ body {
 .item_content{
 	min-height: 10px;
 	width: 100%;
-	background-color: pink;
-	border: black 1px solid;
 	display: flex;
 	justify-content: center;
+	border-top: 1px black solid;
 }
 
 .item_label, .item_input{
 	height: 100%;
-	background-color: yellow;
-	border: 1px black solid;
+/*	background-color: yellow;*/
+/*	border: 1px black solid;*/
 	display: flex	;
 }
 .item_label {
@@ -143,6 +153,7 @@ body {
 .item_input input{
 	width: 50%;
 	text-align: center;
+	border-left: 1px black solid;
 }
 .set_points{
 	width: 100%;
@@ -159,33 +170,37 @@ body {
 	flex: 1 1 auto;
 	height: 20px;
 }
-button:active{
-	background-color:#ffe5a8;
-  box-shadow: 0 2px #666;
-  transform: translateY(1px);
-}
 button:hover{
 	cursor: pointer;
+	background-color: #ffbdab;
+	transition-duration: .2s;
 }
+button:active{
+	background-color:#c25f44;
+  box-shadow: 0 2px #666;
+  transform: translateY(1px);
+  transition-duration: 0s;
+}
+
+
 .text_block{
 	width: 100%;
 	height: 140px;
-	background-color: yellow;
+/*	background-color: yellow;*/
 	display: flex;
 }
 .text_block_column{
 	min-width: 50%;
 	max-width: 50%;
-	background-color: red;
-	border: 1px black solid;
+/*	border: 1px black solid;*/
 	display: flex;
 	flex-direction: column;
 }
 .text_block_row{
-	background-color: blueviolet;
+/*	background-color: blueviolet;*/
 	height: 80%;
 	width: 100%;
-	border: 1px solid black;
+/*	border: 1px solid black;*/
 }
 .row1{
 	height: 20%;
@@ -196,6 +211,7 @@ button:hover{
 .text_block_row textarea{
 	width: 100%;
 	height: 100%;
+	resize: none;
 }
 .form_item_b{
 	order: 1;
@@ -203,17 +219,28 @@ button:hover{
 .text_block{
 	order: 0;
 }
+.text_block .text_block_column:first-child{
+	border-right: 1px black solid;
+}
+.row1{
+	border-bottom: 1px black solid;
+	background-color: #ffdfb8;
+}
 .translation_form{
 	margin-top: 30px;
 	order: 2;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	background-color: pink;
 }
 .translation_form_item textarea{
 	width: 100%;
 	height: 100%;
+	resize: none;
 	border: 1px black solid;
+	border-left: none;
+}
+#word_area_translate{
+	border-right: none;
 }
 .translation_buttons{
 	width: 200%;
