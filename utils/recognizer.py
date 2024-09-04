@@ -9,6 +9,7 @@ class Recognizer:
     def RecognizeText(self, x1, y1, x2, y2):
         screen = pyautogui.screenshot(region=(x1, y1, abs(x2-x1), abs(y2-y1)))
         text = pytesseract.image_to_string(screen).replace("\n"," ")
+        print(text)
         return text
 
 

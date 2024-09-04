@@ -35,7 +35,10 @@ def GetScreenConfig():
 @eel.expose
 def AreaRecognize(x1, y1, x2, y2):
     text = recognizer.RecognizeText(int(x1), int(y1), int(x2), int(y2))
-    translation = recognizer.TranslateText(text)
+    try:
+        translation = recognizer.TranslateText(text)
+    except:
+        translation = "Не вдалося перекласти"
     eel.FillTextData(text, translation)
 
 
