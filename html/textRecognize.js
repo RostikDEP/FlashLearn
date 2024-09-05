@@ -52,13 +52,13 @@ function ClearTranslationFields(){
 
 
 async function TranslateWordClick(){
+    wordTranslateTranslateArea.value = '';
     let word = wordTranslateWordArea.value;
     await eel.TranslateWord(word);
 }
 
 
 function FillTranslateWord(word){
-    wordTranslateTranslateArea.value = '';
     wordTranslateTranslateArea.value = word;
 }
 
