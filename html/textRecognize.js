@@ -9,7 +9,11 @@ let y1 = document.getElementById("y1");
 let x2 = document.getElementById("x2");
 let y2 = document.getElementById("y2");
 
+let wordTranslateTranslateButton = document.getElementById("word_translate_translate_button");
+let wordTranslateClearButton = document.getElementById("word_translate_clear_button");
 
+let wordTranslateWordArea = document.getElementById("word_area_word");
+let wordTranslateTranslateArea = document.getElementById("word_area_translate");
 
 function loadConfigButton__click(){
 	loadConfig();
@@ -40,6 +44,13 @@ function FillTextData(text, translation){
 };
 
 
+function ClearTranslationFields(){
+    wordTranslateTranslateArea.value = '';
+    wordTranslateWordArea.value = '';
+};
+
+
 eel.expose(FillTextData);
 recognize_button.onclick = recognizeButton__click;
 loadConfigButton.onclick = loadConfigButton__click;
+wordTranslateClearButton.onclick = ClearTranslationFields;
