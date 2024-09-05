@@ -50,7 +50,22 @@ function ClearTranslationFields(){
 };
 
 
+
+async function TranslateWordClick(){
+    let word = wordTranslateWordArea.value;
+    await eel.TranslateWord(word);
+}
+
+
+function FillTranslateWord(word){
+    wordTranslateTranslateArea.value = '';
+    wordTranslateTranslateArea.value = word;
+}
+
+
 eel.expose(FillTextData);
+eel.expose(FillTranslateWord);
 recognize_button.onclick = recognizeButton__click;
 loadConfigButton.onclick = loadConfigButton__click;
 wordTranslateClearButton.onclick = ClearTranslationFields;
+wordTranslateTranslateButton.onclick = TranslateWordClick;

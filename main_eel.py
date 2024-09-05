@@ -42,5 +42,14 @@ def AreaRecognize(x1, y1, x2, y2):
     eel.FillTextData(text, translation)
 
 
+@eel.expose
+def TranslateWord(text):
+    try:
+        translation = recognizer.TranslateText(text)
+    except:
+        translation = "Не вдалося перекласти"
+    eel.FillTranslateWord(translation)
+
+
 eel.start("tabs.html")
 # time.sleep(2)
